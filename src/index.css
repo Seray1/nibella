@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border: 11.2px #474bff double;
+    border-left-style: solid;
+    border-radius: 50%;
+    animation: spinner-aib1d7 0.75s infinite linear;
+
+    
+ }
+ .spinner-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ @keyframes spinner-aib1d7 {
+    to {
+       transform: rotate(360deg);
+    }
+ }
+ 
+ 
+ 
