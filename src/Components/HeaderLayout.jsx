@@ -11,19 +11,46 @@ function HeaderLayout() {
           </Link>
         </div>
         <div className="flex gap-8 text-xl">
-          <NavLink to="/notification">
-            <i className="fa-solid fa-bell"></i>
+          <NavLink
+            to="/notification"
+            className={({ isActive }) => (isActive ? 'text-purple-500' : null)}
+          >
+            <div className="flex">
+              <i className="fa-solid fa-bell self-end"></i>
+              <span className="hidden lg:flex">notification</span>
+            </div>
           </NavLink>
-          <NavLink to="cart">
-            <i className="fa-solid fa-cart-shopping"></i>
+          <NavLink
+            to="cart"
+            className={({ isActive }) => (isActive ? 'text-purple-500' : null)}
+          >
+            <div className="flex">
+              <i className="fa-solid fa-cart-shopping self-end"></i>
+              <span className="hidden lg:flex">cart</span>
+            </div>
           </NavLink>
-          <NavLink to="favourite">
-            <i className="fa-solid fa-heart"></i>
+          <NavLink
+            to="favourite"
+            className={({ isActive }) => (isActive ? 'text-purple-500' : null)}
+          >
+            <div className="flex">
+              <i className="fa-solid fa-heart self-end"></i>
+              <span className="hidden lg:flex">favourite</span>
+            </div>
           </NavLink>
-          <NavLink to="search">
-            <i className="fa-solid fa-magnifying-glass"></i>
+          <NavLink
+            to="search"
+            className={({ isActive }) => (isActive ? 'text-purple-500' : null)}
+          >
+            <div className="flex">
+              <i className="fa-solid fa-magnifying-glass self-end"></i>
+              <span className="hidden lg:flex">search</span>
+            </div>
           </NavLink>
-          <NavLink to="navbar">
+          <NavLink
+            to="navbar"
+            className={({ isActive }) => (isActive ? 'text-purple-500' : null)}
+          >
             <i className="fa-solid fa-bars"></i>
           </NavLink>
         </div>
