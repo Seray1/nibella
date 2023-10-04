@@ -60,14 +60,17 @@ function Cart() {
                         className="  rounded-full shadow-lg shadow-black p-1 "
                         onClick={() => handleIncreaseQuantity(product)}
                       >
-                        <i class="fa-solid fa-plus"></i>
+                        <i className="fa-solid fa-plus"></i>
                       </button>
-                      <span>{product.quantity}</span>
+                      <div className="flex flex-col">
+                        <span className="self-center">{product.quantity}</span>
+                        <span>quantity</span>
+                      </div>
                       <button
                         className="  rounded-full shadow-lg shadow-black p-1 "
                         onClick={() => handleDecreaseQuantity(product)}
                       >
-                        <i class="fa-solid fa-minus"></i>
+                        <i className="fa-solid fa-minus"></i>
                       </button>
                     </div>
                   </div>

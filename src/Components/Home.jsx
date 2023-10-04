@@ -48,14 +48,17 @@ function Home() {
   }
 
   return (
-    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 pt-32">
       {data.map((product) => {
         const isFavorite = favorites.some(
           (favProduct) => favProduct.id === product.id
         )
         const isInCart = cart.some((cartItem) => cartItem.id === product.id)
         return (
-          <li key={product.id} className="bg-gray-100 rounded-lg shadow-md p-4">
+          <li
+            key={product.id}
+            className="bg-gray-100 rounded-lg shadow-md p-4 hover:shadow-black hover:shadow-xl "
+          >
             <i
               className={`fa${isFavorite ? 's' : 'r'} fa-heart ${
                 isFavorite ? 'text-red-500' : 'text-gray-500'
