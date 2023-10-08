@@ -8,7 +8,7 @@ function HeaderLayout() {
   const cartItems = useSelector((state) => state.cart)
   return (
     <>
-      <header className="flex justify-between p-4 fixed w-full bg-white z-9999">
+      <header className="fixed flex justify-between w-full p-4 bg-white shadow-sm z-9999 shadow-black">
         <div>
           <Link className="text-xl font-bold" to="/">
             Nibella
@@ -20,7 +20,7 @@ function HeaderLayout() {
             className={({ isActive }) => (isActive ? 'text-purple-500' : null)}
           >
             <div className="flex">
-              <i className="fa-solid fa-bell self-end"></i>
+              <i className="self-end fa-solid fa-bell"></i>
               <span className="hidden lg:flex">notification</span>
             </div>
           </NavLink>
@@ -32,11 +32,11 @@ function HeaderLayout() {
           >
             <div className="flex">
               {cartItems.length < 1 ? null : (
-                <div className="bg-red-700 text-white p-1 h-6 text-xs w-6 rounded-full flex justify-center absolute lg:-left-5 lg:top-0 -top-3 -left-4  items-center">
+                <div className="absolute flex items-center justify-center w-6 h-6 p-1 text-xs text-white bg-red-700 rounded-full lg:-left-5 lg:top-0 -top-3 -left-4">
                   <div>{cartItems.length}</div>
                 </div>
               )}
-              <i className="fa-solid fa-cart-shopping self-end"></i>
+              <i className="self-end fa-solid fa-cart-shopping"></i>
               <span className="hidden lg:flex">cart</span>
             </div>
           </NavLink>
@@ -48,11 +48,11 @@ function HeaderLayout() {
           >
             <div className="flex ">
               {favoritesItems.length < 1 ? null : (
-                <div className="bg-red-700 text-white p-1 h-6 text-xs w-6 rounded-full flex justify-center absolute lg:-left-5 lg:top-0 -top-3 -left-4  items-center">
+                <div className="absolute flex items-center justify-center w-6 h-6 p-1 text-xs text-white bg-red-700 rounded-full lg:-left-5 lg:top-0 -top-3 -left-4">
                   <div>{favoritesItems.length}</div>
                 </div>
               )}
-              <i className="fa-solid fa-heart self-end"></i>
+              <i className="self-end fa-solid fa-heart"></i>
               <span className="hidden lg:flex">favourite</span>
             </div>
           </NavLink>
@@ -61,7 +61,7 @@ function HeaderLayout() {
             className={({ isActive }) => (isActive ? 'text-purple-500' : null)}
           >
             <div className="flex">
-              <i className="fa-solid fa-magnifying-glass self-end"></i>
+              <i className="self-end fa-solid fa-magnifying-glass"></i>
               <span className="hidden lg:flex">search</span>
             </div>
           </NavLink>

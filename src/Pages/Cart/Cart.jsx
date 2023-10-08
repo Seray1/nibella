@@ -28,7 +28,7 @@ function Cart() {
   )
 
   return (
-    <div>
+    <div className="pt-32">
       <div>
         <Link to="/">
           <i className="fa-solid fa-arrow-left"></i>

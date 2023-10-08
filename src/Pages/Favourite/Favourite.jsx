@@ -31,7 +31,7 @@ function Favourite() {
   }
 
   return (
-    <div>
+    <div className="pt-32">
       {/* <h2>Your Favorites</h2> */}
       <div>
         <Link to="/">

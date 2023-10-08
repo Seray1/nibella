@@ -11,6 +11,7 @@ import Cart from './Pages/Cart/Cart'
 import Favourite from './Pages/Favourite/Favourite'
 import Search from './Pages/Search/Search'
 import Navbar from './Pages/Navbar/Navbar'
+import ProductDetail from './Components/ProductDetail'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<HeaderLayout />}>
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="favourite" element={<Favourite />} />
       <Route path="search" element={<Search />} />
       <Route path="navbar" element={<Navbar />} />
+      <Route path="/:id" element={<ProductDetail />} />
     </Route>
   )
 )
